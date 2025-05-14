@@ -1,6 +1,7 @@
 from sys import stdout, version
 from os import write
 import cmath
+import numpy as np
 NoneType = type(None)
 name = "Gabo"
 family_name = "Barn"
@@ -72,3 +73,10 @@ print(dictionary1)
 print(tuple_dict1)
 
 # todo: eucladian difference
+def find_eucladian_difference(x1=0, y1=0, x2=0, y2=0):
+    pointA = np.array((x1, y1))
+    pointB = np.array((x2, y2))
+    d = np.linalg.norm(pointA - pointB)
+    print(d)
+
+find_eucladian_difference(2, 3, 12, 6)
